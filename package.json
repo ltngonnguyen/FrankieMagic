@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "FrankieMagic",
+  "version": "1.1.0",
+  "description": "small node program to generate random terminologies for quiz",
+  "main": "terminologies.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Nguyen",
+  "license": "ISC"
+}
