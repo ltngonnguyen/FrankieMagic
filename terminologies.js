@@ -1,59 +1,30 @@
 let tableCount = 0;
 let checkArr = [];
-
+let weekKHM;
+let weekVIE;
 let trainee = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 
-let weekKHM = [
-  0,
-  [
-    { day: 1, start: 0, end: 0 },
-    { day: 2, start: 6, end: 57 },
-    { day: 3, start: 58, end: 131 },
-    { day: 4, start: 131, end: 218 },
-    { day: 5, start: 6, end: 218 },
-  ],
-  [
-    { day: 1, start: 219, end: 304 },
-    { day: 2, start: 305, end: 372 },
-    { day: 3, start: 373, end: 447 },
-    { day: 4, start: 448, end: 513 },
-    { day: 5, start: 219, end: 513 },
-  ],
-  [
-    { day: 1, start: 514, end: 622 },
-    { day: 2, start: 623, end: 710 },
-    { day: 3, start: 711, end: 809 },
-    { day: 4, start: 810, end: 932 },
-    { day: 5, start: 514, end: 932 },
-  ],
-  [{ day: 1, start: 6, end: 932 }],
-];
+fetch("./data/VIE.json")
+  .then((response) => response.json())
+  .then((data) => {
+    // data is the parsed JSON object
+    // you can assign it to a variable here
+    weekKHM = data;
+  })
+  .catch((error) => {
+    console.error("Error reading JSON file:", error);
+  });
 
-let weekVIE = [
-  0,
-  [
-    { day: 1, start: 0, end: 0 },
-    { day: 2, start: 6, end: 61 },
-    { day: 3, start: 62, end: 133 },
-    { day: 4, start: 134, end: 222 },
-    { day: 5, start: 6, end: 222 },
-  ],
-  [
-    { day: 1, start: 223, end: 309 },
-    { day: 2, start: 310, end: 389 },
-    { day: 3, start: 390, end: 459 },
-    { day: 4, start: 460, end: 534 },
-    { day: 5, start: 223, end: 534 },
-  ],
-  [
-    { day: 1, start: 535, end: 631 },
-    { day: 2, start: 632, end: 724 },
-    { day: 3, start: 725, end: 823 },
-    { day: 4, start: 824, end: 953 },
-    { day: 5, start: 535, end: 953 },
-  ],
-  [{ day: 1, start: 6, end: 953 }],
-];
+fetch("./data/KHM.json")
+  .then((response) => response.json())
+  .then((data) => {
+    // data is the parsed JSON object
+    // you can assign it to a variable here
+    weekVIE = data;
+  })
+  .catch((error) => {
+    console.error("Error reading JSON file:", error);
+  });
 
 function genTable(data) {
   let newTable = document.createElement("table");

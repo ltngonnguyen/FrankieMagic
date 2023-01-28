@@ -1,0 +1,25 @@
+[
+0,
+[
+{ "day": 1, "start": 0, "end": 0 },
+{ "day": 2, "start": 6, "end": 61 },
+{ "day": 3, "start": 62, "end": 133 },
+{ "day": 4, "start": 134, "end": 222 },
+{ "day": 5, "start": 6, "end": 222 }
+],
+[
+{ "day": 1, "start": 223, "end": 309 },
+{ "day": 2, "start": 310, "end": 389 },
+{ "day": 3, "start": 390, "end": 459 },
+{ "day": 4, "start": 460, "end": 534 },
+{ "day": 5, "start": 223, "end": 534 }
+],
+[
+{ "day": 1, "start": 535, "end": 631 },
+{ "day": 2, "start": 632, "end": 724 },
+{ "day": 3, "start": 725, "end": 823 },
+{ "day": 4, "start": 824, "end": 953 },
+{ "day": 5, "start": 535, "end": 953 }
+],
+[{ "day": 1, "start": 6, "end": 953 }]
+]
